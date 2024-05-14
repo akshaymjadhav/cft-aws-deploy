@@ -40,8 +40,8 @@ Resources:
       Role: !GetAtt IAMRole.Arn
       Runtime: python3.8
       Timeout: 300
-        Code:
-	  ZipFile: |
+      Code:
+      ZipFile: |
             import json
 	    import logging
 	    import pathlib
