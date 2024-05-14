@@ -5,7 +5,7 @@ Resources:
   IAMRole:
     Type: AWS::IAM::Role
     Properties:
-      RoleName: !Ref RoleName
+      RoleName: 'lambda_iam_role'
       AssumeRolePolicyDocument:
         Version: '2012-10-17'
         Statement:
