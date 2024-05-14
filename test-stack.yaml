@@ -41,24 +41,22 @@ Resources:
       Runtime: python3.8
       Timeout: 300
       Code:
-      ZipFile: |
+          ZipFile: |
             import json
-	    import logging
-	    import pathlib
-	    import re
-	    import subprocess
-	    import sys
-	    import tempfile
-	    import typing as t
-	    import shutil
-	    import cfnresponse
-	    import boto3
-	    logger = logging.getLogger()
-	    logger.setLevel(logging.INFO)
-
-	    def handler(event, context):
-     	        logger.info('{"event": %s}', json.dumps(event))
-			
+            import logging
+            import pathlib
+            import re
+            import subprocess
+            import sys
+            tempfile
+            import typing as t
+            import shutil
+            import cfnresponse
+            import boto3
+            logger = logging.getLogger()
+            logger.setLevel(logging.INFO)
+            def handler(event, context):
+                logger.info('{"event": %s}', json.dumps(event))
   MyLayer:
     Type: Custom::PipLayer
     Properties:
